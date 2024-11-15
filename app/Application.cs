@@ -16,7 +16,7 @@ namespace log_storage.app
                 Environment.Exit(0);
             }
 
-            AtomicBoolean flag = new AtomicBoolean();
+            var flag = new AtomicBoolean();
             var storageService = new StorageService(logger.getInstance(), configuration,  flag);
             
             new Thread(() =>
